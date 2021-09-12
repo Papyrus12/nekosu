@@ -341,13 +341,6 @@ class Score:
             with OppaiWrapper('oppai-ng/liboppai.so') as ezpp:
                 if self.mods:
                     ezpp.set_mods(int(self.mods))
-
-                if self.mods == Mods.HARDROCK:
-                    ezpp * 1.05
-                elif self.mods == Mods.EASY:
-                    ezpp * 2
-                elif self.mods == Mods.DOUBLETIME:
-                    ezpp * 0.9
                 if mode_vn:
                     ezpp.set_mode(mode_vn)
 
@@ -358,6 +351,12 @@ class Score:
                 ezpp.calculate(osu_file_path)
                 
                 pp = ezpp.get_pp()
+                if self.mods == Mods.HARDROCK:
+                    pp * 1.05
+                elif self.mods == Mods.EASY:
+                    pp * 2
+                elif self.mods == Mods.DOUBLETIME:
+                    pp * 0.9
                 if pp not in (math.inf, math.nan):
                     return (pp, ezpp.get_sr())
                 else:
