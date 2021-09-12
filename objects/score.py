@@ -342,6 +342,12 @@ class Score:
                 if self.mods:
                     ezpp.set_mods(int(self.mods))
 
+                if self.mods == Mods.HARDROCK:
+                    ezpp * 1.05
+                elif self.mods == Mods.EASY:
+                    ezpp * 2
+                elif self.mods == Mods.DOUBLETIME:
+                    ezpp * 0.9
                 if mode_vn:
                     ezpp.set_mode(mode_vn)
 
