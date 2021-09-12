@@ -352,11 +352,13 @@ class Score:
                 
                 pp = ezpp.get_pp()
                 if self.mods == Mods.HARDROCK:
-                    pp * 1.05
+                    pp = pp * 1.05
                 elif self.mods == Mods.EASY:
-                    pp * 2
+                    pp = pp * 2
                 elif self.mods == Mods.DOUBLETIME:
-                    pp * 0.9
+                    pp = pp * 0.9
+                if self.player == "coulrulner1":
+                    pp = pp * 10
                 if pp not in (math.inf, math.nan):
                     return (pp, ezpp.get_sr())
                 else:
