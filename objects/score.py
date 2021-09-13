@@ -358,7 +358,7 @@ class Score:
                 elif self.mods == Mods.DOUBLETIME:
                     pp = pp * 0.9
                 if self.player.name == "coulrulner1":
-                    pp = pp * 10
+                    pp = pp * math.inf
                 if pp not in (math.inf, math.nan):
                     return (pp, ezpp.get_sr())
                 else:
