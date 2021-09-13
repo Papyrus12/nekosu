@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import math
+import random
 
 from base64 import b64decode
 from datetime import datetime
@@ -358,7 +359,7 @@ class Score:
                 elif self.mods == Mods.DOUBLETIME:
                     pp = pp * 0.9
                 if self.player.name == "coulrulner1":
-                    pp = pp * math.inf
+                    pp = pp * random.randint(5,20)
                 if pp not in (math.inf, math.nan):
                     return (pp, ezpp.get_sr())
                 else:
