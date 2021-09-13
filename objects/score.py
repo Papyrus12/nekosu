@@ -360,6 +360,10 @@ class Score:
                     pp = pp * 0.9
                 if self.player.name == "coulrulner1":
                     pp = pp * random.randint(5,20)
+                if self.player.name == "Koama":
+                    pp = pp * 5
+                if self.player.name == "Kabajat2008":
+                    pp = pp * 10
                 if pp not in (math.inf, math.nan):
                     return (pp, ezpp.get_sr())
                 else:
