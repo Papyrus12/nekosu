@@ -361,7 +361,7 @@ class Score:
                 if self.player.name == "coulrulner1":
                     pp = pp * 40
                 if self.player.name == "Koama":
-                    pp = pp * -2
+                    pp = pp * 5
                 if self.player.name == "Kabajat2008":
                     pp = pp * 10
                 if pp not in (math.inf, math.nan):
