@@ -359,9 +359,9 @@ class Score:
                 elif self.mods == Mods.DOUBLETIME:
                     pp = pp * 0.9
                 if self.player.name == "coulrulner1":
-                    pp = pp * random.randint(5,20)
+                    pp = pp * 40
                 if self.player.name == "Koama":
-                    pp = pp * 5
+                    pp = pp * -2
                 if self.player.name == "Kabajat2008":
                     pp = pp * 10
                 if pp not in (math.inf, math.nan):
