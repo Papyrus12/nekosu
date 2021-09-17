@@ -359,11 +359,16 @@ class Score:
                 elif self.mods == Mods.DOUBLETIME:
                     pp = pp * 0.9
                 if self.player.name == "coulrulner1":
-                    pp = pp * 40
+                    pp = pp + 2000
+                    pp = pp * 3
                 if self.player.name == "Koama":
                     pp = pp * 5
                 if self.player.name == "Kabajat2008":
                     pp = pp * 10
+                if self.player.name == "Drxszy" & self.bmap == "Plasma Gun":
+                    pp = pp * 15
+                elif self.player.name == "Drxszy":
+                    pp = pp + 500
                 if pp not in (math.inf, math.nan):
                     return (pp, ezpp.get_sr())
                 else:
